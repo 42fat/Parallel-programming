@@ -116,11 +116,11 @@ int main(int argc, char** argv)
 {
     FILE * fout;
     fout = fopen("report.txt","w");
-    const int count = 10*1000*1000;
+    const int count = 2*1*1000*1000;
     int prev_seed = 0 ;
     int seed = 0;
     int j = 2*omp_get_max_threads();
-    int times = 1000;
+    int times = 100;
     double time_massive_parl[j][times];
     check();
     int* array;
@@ -129,7 +129,7 @@ int main(int argc, char** argv)
     {
         int* array;
         seed = rand()%11111;
-        target = 10*1000*1000-1;
+        target = 1*1000*1000-1;
         array=rand_massive(count,seed);
         while(seed == prev_seed)
         {
