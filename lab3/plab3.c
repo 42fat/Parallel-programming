@@ -40,9 +40,11 @@ int main()
                     }
                 }
             }
-        }      
+        }
+        end_time = omp_get_wtime();
+        printf("threads : %d , time : %lf",k,end_time-start_time);
+        for(int i=0;i<count;i++){a[i]=array[i];}
     }
-    
-    
+
     return 0;
 }
